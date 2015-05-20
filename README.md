@@ -15,6 +15,6 @@ The app will allow the parents and teachers to converse immediately regarding th
 
 Hold down the (Ctrl) button and Press the (+) to enlarge the screen to get a better view on the image 
 
-![Alt text](images/EduLoop.png)
+![Alt text](images/EduLoop.jpg)
 
 Lets do everything in our power to equip the generation of Tommorrow.
