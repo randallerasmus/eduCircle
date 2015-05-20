@@ -9,6 +9,11 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
-public interface Person {
+public interface Person 
+{
+    public String getName();
+    public String getSurname();
+    public String getRace();
+    public String getGender();
     
 }

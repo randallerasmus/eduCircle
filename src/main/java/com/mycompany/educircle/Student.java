@@ -9,6 +9,25 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
-public class Student {
+public abstract class Student implements Person
+{
+    public Integer IdentityNr;
+    public Integer Grade;
+
+    public Integer getIdentityNr() {
+        return IdentityNr;
+    }
+
+    public void setIdentityNr(Integer IdentityNr) {
+        this.IdentityNr = IdentityNr;
+    }
+
+    public Integer getGrade() {
+        return Grade;
+    }
+
+    public void setGrade(Integer Grade) {
+        this.Grade = Grade;
+    }
     
 }

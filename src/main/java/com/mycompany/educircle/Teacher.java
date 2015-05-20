@@ -9,6 +9,26 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
-public class Teacher {
+public class Teacher 
+{
+    public String subjectTitle;
+    public Integer ContactNr;
+
+    public String getSubjectTitle() {
+        return subjectTitle;
+    }
+
+    public void setSubjectTitle(String subjectTitle) {
+        this.subjectTitle = subjectTitle;
+    }
+
+    public Integer getContactNr() {
+        return ContactNr;
+    }
+
+    public void setContactNr(Integer ContactNr) {
+        this.ContactNr = ContactNr;
+    }
+    
     
 }

@@ -9,6 +9,16 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
-public class Administrator {
+public abstract class Administrator implements Person
+{
+    public Integer Empno;
+
+    public Integer getEmpno() {
+        return Empno;
+    }
+
+    public void setEmpno(Integer Empno) {
+        this.Empno = Empno;
+    }
     
 }
