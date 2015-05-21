@@ -58,9 +58,9 @@ public class Event implements Serializable
     private Time EventTime;
     }
     
-    public Builder EventName(String value)
+    public Builder (String EventName)
     {
-        this.EventName = value;
+        this.EventName = EventName;
         return this;
     }
     
