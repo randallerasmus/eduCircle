@@ -9,6 +9,7 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
+
 public class School 
 {
     public String Name;
@@ -65,4 +66,6 @@ public class School
     public void setStudentNr(Integer StudentNr) {
         this.StudentNr = StudentNr;
     }
+
+  
 }

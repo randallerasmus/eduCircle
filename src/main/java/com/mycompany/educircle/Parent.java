@@ -9,7 +9,8 @@ package com.mycompany.educircle;
  *
  * @author RASCAL
  */
-public abstract class Parent implements Person
+
+public class Parent implements Person
 {
     public String email;
     public Integer ContactNr;
@@ -19,24 +20,60 @@ public abstract class Parent implements Person
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public Integer getContactNr() {
         return ContactNr;
-    }
-
-    public void setContactNr(Integer ContactNr) {
-        this.ContactNr = ContactNr;
     }
 
     public Integer getIdentityNr() {
         return identityNr;
     }
+    public Parent(Builder builder) { 
+         this.email=builder.email; 
+         this.ContactNr=builder.ContactNr; 
+        this.identityNr=builder.identityNr; 
+     } 
+ 
+ 
+     public static class Builder{ 
+         private String email;
+         private Integer ContactNr;
+         private Integer identityNr;
+       
+ 
+ 
+         public Builder email(String email) { 
+             this.email = email; 
+             return this; 
+         } 
+ 
+ 
+         public Builder ContactNr(Integer value){ 
+             this.ContactNr=value; 
+             return this; 
+         } 
+ 
+ 
+         public Builder identityNr(Integer value){ 
+             this.identityNr=value; 
+             return this; 
+         } 
+  
+         public Builder copy(Parent value){ 
+             this.email=value.email; 
+             this.ContactNr=value.ContactNr; 
+             this.identityNr=value.identityNr; 
+           
+             return this; 
+         } 
+ 
+ 
+         public Parent build(){ 
+             return new Parent(this); 
+         } 
+ 
+ 
+     } 
+ } 
 
-    public void setIdentityNr(Integer identityNr) {
-        this.identityNr = identityNr;
-    }
     
-}
+

@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package com.mycompany.educircle;
-
+import java.io.Serializable;
 /**
  *
  * @author RASCAL
  */
-public class Result 
+public class Result implements Serializable
 {
     public String StudentName;
     public String SubjectName;
@@ -19,23 +19,50 @@ public class Result
         return StudentName;
     }
 
-    public void setStudentName(String StudentName) {
-        this.StudentName = StudentName;
-    }
-
     public String getSubjectName() {
         return SubjectName;
-    }
-
-    public void setSubjectName(String SubjectName) {
-        this.SubjectName = SubjectName;
     }
 
     public Double getStudentMarks() {
         return StudentMarks;
     }
 
-    public void setStudentMarks(Double StudentMarks) {
-        this.StudentMarks = StudentMarks;
+    public Result(Builder builder)
+    {
+        this.StudentName=builder.StudentName;
+        this.SubjectName=builder.SubjectName;
+        this.StudentMarks=builder.StudentMarks;
+     }
+    public static class Builder{
+        private String StudentName;
+        private String SubjectName;
+        private Double StudentMarks;
+    }
+    
+    public Builder (String StudentName)
+    {
+        this.StudentName=StudentName;
+        
+    }
+    public Builder SubjectName (String value)
+    {
+        this.SubjectName=value;
+        return this;
+    }
+    public Builder StudentMarks(Double value)
+    {
+        this.StudentMarks=value;
+        return this;
+    }
+    public Builder copy(Result value){
+        this.StudentName=value.getStudentName();
+        this.SubjectName=value.getSubjectName();
+        this.StudentMarks=value.getStudentMarks();
+        return this;
+        
+    }
+    public Result build()
+    {
+        return new Result(this);
     }
 }

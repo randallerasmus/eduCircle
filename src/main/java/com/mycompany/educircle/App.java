@@ -8,6 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Event user1 = new Event.Builder("Lokesh", "Gupta")
+	.age(30)
+	.phone("1234567")
+	.address("Fake address 1234")
+	.build();
+
     }
 }

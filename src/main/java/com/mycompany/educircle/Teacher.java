@@ -4,31 +4,54 @@
  * and open the template in the editor.
  */
 package com.mycompany.educircle;
+import java.io.Serializable;
 
 /**
  *
  * @author RASCAL
  */
-public class Teacher 
+public class Teacher implements Serializable
 {
-    public String subjectTitle;
+    public String SubjectTitle;
     public Integer ContactNr;
 
     public String getSubjectTitle() {
-        return subjectTitle;
+        return SubjectTitle;
     }
 
-    public void setSubjectTitle(String subjectTitle) {
-        this.subjectTitle = subjectTitle;
-    }
-
-    public Integer getContactNr() {
+     public Integer getContactNr() {
         return ContactNr;
     }
 
-    public void setContactNr(Integer ContactNr) {
-        this.ContactNr = ContactNr;
+  public Teacher (Builder builder)
+  {
+      this.SubjectTitle=builder.SubjectTitle;
+      this.ContactNr=builder.ContactNr;
+  }    
+    public static class Builder{ 
+         private String SubjectTitle;
+         private Integer ContactNr;
     }
-    
-    
+       
+ 
+         public Builder SubjectTitle(String value) { 
+             this.SubjectTitle = value; 
+             return this; 
+         } 
+  
+         public Builder ContactNr(Integer value){ 
+             this.ContactNr=value; 
+             return this; 
+         } 
+ 
+          public Teacher copy(Teacher value){ 
+             this.SubjectTitle=value.SubjectTitle;
+             this.ContactNr=value.ContactNr; 
+            return this; 
+         } 
+ 
+ 
+         public Teacher build(){ 
+             return new Teacher(this); 
+         } 
 }
