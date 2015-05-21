@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.educircle;
+package educircle.Tests;
 
+import educircle.domain.TimeTable;
+import educircle.domain.Subject;
 import java.sql.Time;
 import java.util.Date;
 import junit.framework.TestCase;

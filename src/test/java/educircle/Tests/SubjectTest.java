@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.educircle;
+package educircle.Tests;
 
+import educircle.domain.Subject;
 import junit.framework.TestCase;
 
 /**
  *
  * @author RASCAL
  */
-public class TeacherTest extends TestCase {
+public class SubjectTest extends TestCase {
     
-    public TeacherTest(String testName) {
+    public SubjectTest(String testName) {
         super(testName);
     }
     
@@ -28,81 +29,81 @@ public class TeacherTest extends TestCase {
     }
 
     /**
-     * Test of getSubjectTitle method, of class Teacher.
+     * Test of getSubjectName method, of class Subject.
      */
-    public void testGetSubjectTitle() {
-        System.out.println("getSubjectTitle");
-        Teacher instance = null;
+    public void testGetSubjectName() {
+        System.out.println("getSubjectName");
+        Subject instance = null;
         String expResult = "";
-        String result = instance.getSubjectTitle();
+        String result = instance.getSubjectName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getContactNr method, of class Teacher.
+     * Test of getSubjectCode method, of class Subject.
      */
-    public void testGetContactNr() {
-        System.out.println("getContactNr");
-        Teacher instance = null;
+    public void testGetSubjectCode() {
+        System.out.println("getSubjectCode");
+        Subject instance = null;
         Integer expResult = null;
-        Integer result = instance.getContactNr();
+        Integer result = instance.getSubjectCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of SubjectTitle method, of class Teacher.
+     * Test of SubjectName method, of class Subject.
      */
-    public void testSubjectTitle() {
-        System.out.println("SubjectTitle");
-        String value = "";
-        Teacher instance = null;
-        Teacher.Builder expResult = null;
-        Teacher.Builder result = instance.SubjectTitle(value);
+    public void testSubjectName() {
+        System.out.println("SubjectName");
+        String SubjectName = "";
+        Subject instance = null;
+        Subject.Builder expResult = null;
+        Subject.Builder result = instance.SubjectName(SubjectName);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of ContactNr method, of class Teacher.
+     * Test of SubjectCode method, of class Subject.
      */
-    public void testContactNr() {
-        System.out.println("ContactNr");
+    public void testSubjectCode() {
+        System.out.println("SubjectCode");
         Integer value = null;
-        Teacher instance = null;
-        Teacher.Builder expResult = null;
-        Teacher.Builder result = instance.ContactNr(value);
+        Subject instance = null;
+        Subject.Builder expResult = null;
+        Subject.Builder result = instance.SubjectCode(value);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of copy method, of class Teacher.
+     * Test of copy method, of class Subject.
      */
     public void testCopy() {
         System.out.println("copy");
-        Teacher value = null;
-        Teacher instance = null;
-        Teacher expResult = null;
-        Teacher result = instance.copy(value);
+        Subject value = null;
+        Subject instance = null;
+        Subject expResult = null;
+        Subject result = instance.copy(value);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of build method, of class Teacher.
+     * Test of build method, of class Subject.
      */
     public void testBuild() {
         System.out.println("build");
-        Teacher instance = null;
-        Teacher expResult = null;
-        Teacher result = instance.build();
+        Subject instance = null;
+        Subject expResult = null;
+        Subject result = instance.build();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

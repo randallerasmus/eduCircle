@@ -1,4 +1,4 @@
-package com.mycompany.educircle;
+package educircle.Tests;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
