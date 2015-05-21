@@ -5,20 +5,33 @@
  */
 package educircle.domain;
 
+
 /**
  *
  * @author RASCAL
  */
 public abstract class Administrator implements Person
 {
-    public Integer Empno;
+    private int Empno;
 
-    public Integer getEmpno() {
+    public int getEmpno() {
         return Empno;
     }
-
-    public void setEmpno(Integer Empno) {
-        this.Empno = Empno;
-    }
     
+    public Administrator(Builder builder)
+    {
+        this.Empno=builder.Empno;
+    }
+    public static class Builder
+    {
+        private int Empno;
+    }
+    public Builder(int Empno)
+    {
+        this.Empno=Empno;
+    }
+    public Administrator build()
+    {
+        return new Administrator(this);
+    }
 }
