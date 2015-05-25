@@ -18,7 +18,8 @@ public class Result implements Serializable
     public String getStudentName() {
         return StudentName;
     }
-
+    
+            
     public String getSubjectName() {
         return SubjectName;
     }
@@ -39,12 +40,12 @@ public class Result implements Serializable
         private Double StudentMarks;
     }
     
-    public Builder (String StudentName)
+    private Builder (String StudentName)
     {
         this.StudentName=StudentName;
         
     }
-    public Builder SubjectName (String value)
+    private Builder SubjectName (String value)
     {
         this.SubjectName=value;
         return this;

@@ -56,12 +56,12 @@ public class Event implements Serializable
     private Date EventDate;
     private String EventLocation;
     private Time EventTime;
-    }
+    
     
     public Builder (String EventName)
     {
         this.EventName = EventName;
-        return this;
+        //return this;
     }
     
     public Builder EventDate( Date value)
@@ -80,7 +80,7 @@ public class Event implements Serializable
         this.EventTime = value;
         return this;
     }
-
+    
     public Event copy (Event value)
     {
          this.EventName=value.EventName;
@@ -94,6 +94,7 @@ public class Event implements Serializable
     {
         return new Event(this);
         
+    }
     }
 }
 

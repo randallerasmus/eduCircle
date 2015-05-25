@@ -51,9 +51,9 @@ public class TimeTable
     private Time SubjectTime;
     }
     
-    public Builder SubjectVenue(String value)
+    public Builder (String SubjectVenue)
     {
-        this.SubjectVenue = value;
+        this.SubjectVenue = SubjectVenue;
         return this;
     }
     
