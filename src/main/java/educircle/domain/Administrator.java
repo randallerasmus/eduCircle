@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package educircle.domain;
 
 import java.io.Serializable;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,17 +16,11 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String subjectName;
-    private int subjectCode;
+    private int EmpNo;
 
-    public String getSubjectName() {
-    return subjectName;
+    public int getEmpNo() {
+        return EmpNo;
     }
-
-    public int getSubjectCode() {
-        return subjectCode;
-    }
-    
     public Long getId() {
         return id;
     }
@@ -41,45 +29,36 @@ import javax.persistence.Id;
     {
         
     }
-    @Embedded
-    private Result result;
-            
-    @Embedded
-    private TimeTable timetable;
-    
-    @Embedded
-    private NonAttendance nonattend;
-            
     public Administrator (Builder builder){
         this.id=builder.id;
-        this.subjectCode=builder.subjectCode;
-        this.subjectName=builder.subjectName;
+        this.EmpNo=builder.EmpNo;
+     
         
     }
     public static class Builder
     {
-        private Integer subjectCode;
-        private String subjectName;
+        private Integer EmpNo;
         private Long id;
         
     
     
-    public Builder subjectCode(Integer subjectCode)
+    public Builder (Integer EmpNo)
     {
-        this.subjectCode=subjectCode;
-        return this;
+        this.EmpNo=EmpNo;
+       
         
     }
-     public Builder subjectName(String subjectName)
-    {
-        this.subjectName=subjectName;
-        return this;
-    }
-   
+    
     public Builder id(Long value)
     {
         this.id=value;
         return this;
+    }
+     public Builder copy (Builder value){
+        this.id=value.id;
+        this.EmpNo=value.EmpNo;
+     return this;
+        
     }
     public Administrator build()
     {

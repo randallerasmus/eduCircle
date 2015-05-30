@@ -6,7 +6,6 @@
 package educircle.domain;
 
 import java.io.Serializable;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,13 +16,12 @@ import javax.persistence.Id;
  * @author RASCAL
  */
 @Entity
-    public class Registration implements Serializable {
+    public class Registration implements Serializable 
+{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    
     private String name;
     private String surname;
     private String race;
@@ -97,8 +95,6 @@ import javax.persistence.Id;
             this.gender = gender;
             return this;
         }
-        
-    
     
     public Builder studentNr(Integer studentNr)
     {
@@ -110,6 +106,16 @@ import javax.persistence.Id;
     {
         this.name=name;
         return this;
+    }
+     public Builder copy (Builder value){
+        this.id=value.id;
+        this.studentNr=value.studentNr;
+        this.name=value.name;
+        this.surname=value.surname;
+        this.race=value.race;
+        this.gender=value.gender;
+        return this;
+        
     }
    
    

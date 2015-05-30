@@ -22,64 +22,74 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String subjectName;
-    private int subjectCode;
 
-    public String getSubjectName() {
-    return subjectName;
-    }
+    private String email;
+    private int identityNr;
+    private int ContactNr;
 
-    public int getSubjectCode() {
-        return subjectCode;
-    }
-    
     public Long getId() {
         return id;
     }
+    
+    public String getEmail() {
+        return email;
+    }
 
+    public int getIdentityNr() {
+        return identityNr;
+    }
+
+    public int getContactNr() {
+        return ContactNr;
+    }
     public Parent ()
     {
         
     }
-    @Embedded
-    private Result result;
-            
-    @Embedded
-    private TimeTable timetable;
     
-    @Embedded
-    private NonAttendance nonattend;
             
     public Parent (Builder builder){
         this.id=builder.id;
-        this.subjectCode=builder.subjectCode;
-        this.subjectName=builder.subjectName;
+        this.identityNr=builder.identityNr;
+        this.email=builder.email;
+        this.ContactNr=builder.ContactNr;
         
     }
     public static class Builder
     {
-        private Integer subjectCode;
-        private String subjectName;
+        private Integer identityNr;
+        private String email;
         private Long id;
+        private int ContactNr;
         
-    
-    
-    public Builder subjectCode(Integer subjectCode)
+    public Builder (String email)
     {
-        this.subjectCode=subjectCode;
-        return this;
-        
+        this.email=email;
     }
-     public Builder subjectName(String subjectName)
+    
+    public Builder identityNr(Integer identityNr)
     {
-        this.subjectName=subjectName;
+        this.identityNr=identityNr;
         return this;
-    }
-   
+     }
+      
     public Builder id(Long value)
     {
         this.id=value;
         return this;
+    }
+    public Builder ContactNr(Integer ContactNr)
+    {
+        this.ContactNr=ContactNr;
+        return this;
+    }
+    public Builder copy (Builder value){
+        this.id=value.id;
+        this.identityNr=value.identityNr;
+        this.email=value.email;
+        this.ContactNr=value.ContactNr;
+        return this;
+        
     }
     public Parent build()
     {
