@@ -46,12 +46,12 @@ public class Result implements Serializable
         private Double StudentMarks;
     
     
-    private Builder (String StudentName)
+    public Builder (String StudentName)
     {
         this.StudentName=StudentName;
         
     }
-    private Builder SubjectName (String value)
+    public Builder SubjectName (String value)
     {
         this.SubjectName=value;
         return this;
