@@ -64,6 +64,10 @@ import javax.persistence.Id;
     {
         return new Administrator(this);
     }
+
+        public Object Name(String Name) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
     
     @Override
