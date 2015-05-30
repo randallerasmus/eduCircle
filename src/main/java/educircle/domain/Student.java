@@ -22,51 +22,58 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String subjectName;
-    private int subjectCode;
+    private String grade;
+    private int identityNr;
+    private int ContactNr;
+    private int postalCode;
 
-    public String getSubjectName() {
-    return subjectName;
-    }
-
-    public int getSubjectCode() {
-        return subjectCode;
-    }
-    
     public Long getId() {
         return id;
     }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public int getIdentityNr() {
+        return identityNr;
+    }
+
+    public int getContactNr() {
+        return ContactNr;
+    }
+
+    public int getPostalCode() {
+        return postalCode;
+    }
+
+   
+    
+   
 
     public Student ()
     {
         
     }
-    @Embedded
-    private Result result;
-            
-    @Embedded
-    private TimeTable timetable;
-    
-    @Embedded
-    private NonAttendance nonattend;
+   
             
     public Student (Builder builder){
         this.id=builder.id;
-        this.subjectCode=builder.subjectCode;
-        this.subjectName=builder.subjectName;
+        this.identityNr=builder.identityNr;
+       
         
     }
     public static class Builder
     {
-        private Integer subjectCode;
+        private Integer identityNr;
         private String subjectName;
         private Long id;
         
     
     
-    public Builder subjectCode(Integer subjectCode)
+    public Builder identityNr(Integer identityNr)
     {
-        this.subjectCode=subjectCode;
+        this.identityNr=identityNr;
         return this;
         
     }

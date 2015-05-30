@@ -89,12 +89,12 @@ public class NonAttendance implements Serializable
         this.AbsentTime=AbsentTime;
         return this;
     }
-    public Builder copy (Builder builder){
-        this.StudentNr=builder.StudentNr;
-        this.StudentName=builder.StudentName;
-        this.SubjectName=builder.SubjectName;
-        this.AbsentDate=builder.AbsentDate;
-        this.AbsentTime=builder.AbsentTime;
+    public Builder copy (Builder value){
+        this.StudentNr=value.StudentNr;
+        this.StudentName=value.StudentName;
+        this.SubjectName=value.SubjectName;
+        this.AbsentDate=value.AbsentDate;
+        this.AbsentTime=value.AbsentTime;
         return this;
     }
     public NonAttendance build()

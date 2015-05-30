@@ -76,6 +76,13 @@ import javax.persistence.Id;
     {
         return new Teacher(this);
     }
+     public Builder copy (Builder value){
+        this.id=value.id;
+        this.ContactNr=value.ContactNr;
+        this.subjectTitle=value.subjectTitle;
+        return this;
+        
+    }
     }
     
     @Override

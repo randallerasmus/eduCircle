@@ -85,6 +85,13 @@ import javax.persistence.Id;
     {
         return new Subject(this);
     }
+    public Builder copy(Builder value){
+        this.id=value.id;
+        this.subjectCode=value.subjectCode;
+        this.subjectName=value.subjectName;
+            return this;
+        
+    }
     }
     
     @Override
