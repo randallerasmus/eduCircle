@@ -41,15 +41,7 @@ import javax.persistence.Id;
     {
         
     }
-    @Embedded
-    private Result result;
-            
-    @Embedded
-    private TimeTable timetable;
-    
-    @Embedded
-    private NonAttendance nonattend;
-            
+              
     public Subject (Builder builder){
         this.id=builder.id;
         this.subjectCode=builder.subjectCode;
@@ -70,10 +62,10 @@ import javax.persistence.Id;
         return this;
         
     }
-     public Builder subjectName(String subjectName)
+     public Builder (String subjectName)
     {
         this.subjectName=subjectName;
-        return this;
+        
     }
    
     public Builder id(Long value)

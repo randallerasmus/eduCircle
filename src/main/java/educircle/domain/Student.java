@@ -6,7 +6,6 @@
 package educircle.domain;
 
 import java.io.Serializable;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -47,47 +46,57 @@ import javax.persistence.Id;
         return postalCode;
     }
 
-   
-    
-   
-
     public Student ()
     {
         
     }
-   
+
             
     public Student (Builder builder){
         this.id=builder.id;
         this.identityNr=builder.identityNr;
-       
-        
+        this.ContactNr=builder.ContactNr;
+        this.grade=builder.grade;
+        this.postalCode=builder.postalCode;
     }
+    
     public static class Builder
     {
-        private Integer identityNr;
-        private String subjectName;
         private Long id;
+        private Integer identityNr;
+        private int ContactNr;
+        private String grade;
+        private int postalCode;
+       
         
-    
-    
-    public Builder identityNr(Integer identityNr)
-    {
-        this.identityNr=identityNr;
-        return this;
         
-    }
-     public Builder subjectName(String subjectName)
-    {
-        this.subjectName=subjectName;
-        return this;
-    }
-   
-    public Builder id(Long value)
+     public Builder id(Long value)
     {
         this.id=value;
         return this;
+    }   
+    
+    public Builder (Integer identityNr)
+    {
+        this.identityNr=identityNr;
+        
     }
+    public Builder grade (String grade)
+    {
+        this.grade=grade;
+        return this;
+    }
+    public Builder ContactNr(int ContactNr)
+    {
+        this.ContactNr=ContactNr;
+        return this;
+    }
+    public Builder postalCode(int postalCode)
+    {
+        this.postalCode=postalCode;
+        return this;
+    }
+    
     public Student build()
     {
         return new Student(this);

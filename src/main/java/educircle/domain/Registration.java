@@ -64,6 +64,7 @@ import javax.persistence.Id;
         this.surname=builder.surname;
         this.race=builder.race;
         this.gender=builder.gender;
+        this.grade=builder.grade;
         
     }
     public static class Builder
@@ -74,6 +75,7 @@ import javax.persistence.Id;
         private String surname;
         private String race;
         private String gender;
+        private String grade;
         
          public Builder id(Long value)
     {
@@ -96,15 +98,19 @@ import javax.persistence.Id;
             return this;
         }
     
-    public Builder studentNr(Integer studentNr)
+    public Builder (Integer studentNr)
     {
         this.studentNr=studentNr;
-        return this;
-        
+            
     }
      public Builder name(String name)
     {
         this.name=name;
+        return this;
+    }
+     public Builder grade(String grade)
+    {
+        this.grade=grade;
         return this;
     }
      public Builder copy (Builder value){
@@ -114,6 +120,7 @@ import javax.persistence.Id;
         this.surname=value.surname;
         this.race=value.race;
         this.gender=value.gender;
+        this.grade=value.grade;
         return this;
         
     }

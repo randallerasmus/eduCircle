@@ -61,10 +61,10 @@ import javax.persistence.Id;
         return this;
         
     }
-     public Builder subjectTitle(String subjectTitle)
+     public Builder(String subjectTitle)
     {
         this.subjectTitle=subjectTitle;
-        return this;
+        
     }
    
     public Builder id(Long value)
