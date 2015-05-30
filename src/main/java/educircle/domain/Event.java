@@ -64,12 +64,11 @@ import javax.persistence.Id;
     }
 
     public void EventBuilder(String EventName, String EventLocation, Date EventDate, Time EventTime) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
+//To change body of generated methods, choose Tools | Templates.
     }
 
-    public void EventBuilder(String EventName, String EventLocation, Date EventDate, Time EventTime) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     public static class Builder
     {
         private String EventName;
