@@ -8,10 +8,12 @@ package educircle.domain;
 import java.sql.Time;
 import java.util.Date;
 import java.io.Serializable;
+import javax.persistence.Embeddable;
 /**
  *
  * @author RASCAL
  */
+@Embeddable
 public class NonAttendance implements Serializable
 {
     public Integer StudentNr;
@@ -19,6 +21,9 @@ public class NonAttendance implements Serializable
     public String SubjectName;
     public Date AbsentDate;
     public Time AbsentTime;
+
+    public NonAttendance() {
+    }
 
     public Integer getStudentNr() 
     {
@@ -57,10 +62,10 @@ public class NonAttendance implements Serializable
         private Time AbsentTime;
     
     
-    public Builder StudentNr(Integer StudentNr)
+    public Builder (Integer StudentNr)
     {
         this.StudentNr=StudentNr;
-        return this;
+       
         
     }
      public Builder StudentName(String StudentName)
@@ -82,6 +87,14 @@ public class NonAttendance implements Serializable
     public Builder AbsentTime(Time AbsentTime)
     {
         this.AbsentTime=AbsentTime;
+        return this;
+    }
+    public Builder copy (Builder builder){
+        this.StudentNr=builder.StudentNr;
+        this.StudentName=builder.StudentName;
+        this.SubjectName=builder.SubjectName;
+        this.AbsentDate=builder.AbsentDate;
+        this.AbsentTime=builder.AbsentTime;
         return this;
     }
     public NonAttendance build()

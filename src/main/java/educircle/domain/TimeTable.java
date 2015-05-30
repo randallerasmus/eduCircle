@@ -5,19 +5,25 @@
  */
 package educircle.domain;
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
+import javax.persistence.Embeddable;
 
 /**
  *
  * @author RASCAL
  */
-public class TimeTable 
+@Embeddable
+public class TimeTable implements Serializable
 {
     public String SubjectName;
     public Date SubjectDate;
     public Time SubjectTime;
     public String SubjectVenue;
+
+    public TimeTable() {
+    }
 
     public String getSubjectName() {
         return SubjectName;
@@ -49,12 +55,12 @@ public class TimeTable
     private Date SubjectDate;
     private String SubjectName;
     private Time SubjectTime;
-    }
+    
     
     public Builder (String SubjectVenue)
     {
         this.SubjectVenue = SubjectVenue;
-        return this;
+        
     }
     
     public Builder SubjectDate( Date value)
@@ -74,7 +80,7 @@ public class TimeTable
         return this;
     }
 
-    public TimeTable copy (TimeTable value)
+    public Builder copy (TimeTable value)
     {
          this.SubjectVenue=value.SubjectVenue;
         this.SubjectName=value.SubjectName;
@@ -83,10 +89,10 @@ public class TimeTable
          return this;
     }
       
-   public Subject build()
+   public TimeTable build()
     {
-        return new Subject(this);
+        return new TimeTable(this);
         
     }
-    
+    }
 }
