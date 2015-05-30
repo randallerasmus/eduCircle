@@ -55,7 +55,7 @@ public class NonAttendance implements Serializable
         private String SubjectName;
         private Date AbsentDate;
         private Time AbsentTime;
-    }
+    
     
     public Builder StudentNr(Integer StudentNr)
     {
@@ -87,5 +87,6 @@ public class NonAttendance implements Serializable
     public NonAttendance build()
     {
         return new NonAttendance(this);
+    }
     }
 }

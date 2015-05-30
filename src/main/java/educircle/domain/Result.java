@@ -34,11 +34,12 @@ public class Result implements Serializable
         this.SubjectName=builder.SubjectName;
         this.StudentMarks=builder.StudentMarks;
      }
-    public static class Builder{
+    public static class Builder
+    {
         private String StudentName;
         private String SubjectName;
         private Double StudentMarks;
-    }
+    
     
     private Builder (String StudentName)
     {
@@ -65,5 +66,6 @@ public class Result implements Serializable
     public Result build()
     {
         return new Result(this);
+    }
     }
 }
