@@ -5,15 +5,20 @@
  */
 package educircle.domain;
 import java.io.Serializable;
+import javax.persistence.Embeddable;
 /**
  *
  * @author RASCAL
  */
+@Embeddable
 public class Result implements Serializable
 {
     public String StudentName;
     public String SubjectName;
     public Double StudentMarks;
+
+    public Result() {
+    }
 
     public String getStudentName() {
         return StudentName;
