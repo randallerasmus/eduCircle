@@ -5,10 +5,21 @@
  */
 package educirce.factories;
 
+import educircle.domain.Teacher;
+
 /**
  *
  * @author RASCAL
  */
-public class TeacherFactory {
+public class TeacherFactory 
+{
+    public static Teacher createTeacher(String subjectTitle,int ContactNr)
+    {
+        Teacher educators = new Teacher
+                .Builder(subjectTitle)
+                .ContactNr(ContactNr)
+                .build();
+        return educators;
+    }
     
 }

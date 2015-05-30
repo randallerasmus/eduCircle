@@ -5,10 +5,22 @@
  */
 package educirce.factories;
 
+import educircle.domain.Result;
+
 /**
  *
  * @author RASCAL
  */
-public class ResultFactory {
+public class ResultFactory 
+{
+    public static Result createResult(String StudentName,String SubjectName,Double StudentMarks)
+    {
+        Result mark = new Result
+                .Builder(StudentName)
+                .StudentMarks(StudentMarks)
+                .SubjectName(SubjectName)
+                .build();
+        return mark;
+    }
     
 }

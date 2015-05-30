@@ -13,17 +13,12 @@ import educircle.domain.Administrator;
  */
 public class AdministratorFactory 
 {
-   public static Administrator createAdministrator(String Name,String Surname,
-           String Race,String Gender,int Empno)
+   public static Administrator createAdministrator(int Empno)
    {
        Administrator admin = new Administrator
                .Builder(Empno)
-               .Name(Name)
-               .Surname(Surname)
-               .Race(Race)
-               .Gender(Gender)
                .build();
-       return Administrator;
+       return admin;
    
    }
 }

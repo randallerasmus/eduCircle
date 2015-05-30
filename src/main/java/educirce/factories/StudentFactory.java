@@ -5,10 +5,24 @@
  */
 package educirce.factories;
 
+import educircle.domain.Student;
+
 /**
  *
  * @author RASCAL
  */
-public class StudentFactory {
+public class StudentFactory 
+{
+    public static Student createStudent(String grade,int identityNr,int ContactNr,
+            int postalCode)
+    {
+        Student studs = new Student
+                .Builder(identityNr)
+                .ContactNr(ContactNr)
+                .grade(grade)
+                .postalCode(postalCode)
+                .build();
+        return studs;
+    }
     
 }

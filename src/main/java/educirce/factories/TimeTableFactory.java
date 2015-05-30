@@ -19,12 +19,12 @@ public class TimeTableFactory {
     public static TimeTable createTimeTable(String SubjectName,Date SubjectDate,
             Time SubjectTime,String SubjectVenue)
     {
-        TimeTable asap = new TimeTable
+        TimeTable timesheets = new TimeTable
                 .Builder(SubjectVenue)
                 .SubjectDate(SubjectDate)
                 .SubjectTime(SubjectTime)
                 .SubjectName(SubjectName)
                 .build();
-             return asap;
+             return timesheets;
     }
 }
