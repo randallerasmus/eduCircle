@@ -14,9 +14,9 @@ public class ParentFactory
     public static Parent creatParent(String email,int identityNr,int ContactNr)
     {
         Parent par = new Parent
-                .Builder(email)
+                .Builder(identityNr)
                 .ContactNr(ContactNr)
-                .identityNr(identityNr)
+                .email(email)
                 .build();
            return par;
                 }
