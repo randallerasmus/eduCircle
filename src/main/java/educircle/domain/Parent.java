@@ -6,120 +6,77 @@
 package educircle.domain;
 
 import java.io.Serializable;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Embeddable;
 
 /**
  *
  * @author RASCAL
  */
-@Entity
-    public class Parent implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
+@Embeddable
+public class Parent implements Serializable
+{
     private String email;
-    private int identityNr;
     private int ContactNr;
+    private int identityNr;
 
-    public Long getId() {
-        return id;
-    }
-    
     public String getEmail() {
         return email;
-    }
-
-    public int getIdentityNr() {
-        return identityNr;
     }
 
     public int getContactNr() {
         return ContactNr;
     }
-    public Parent ()
+
+    public int getIdentityNr() {
+        return identityNr;
+    }
+    
+    public Parent()
     {
         
     }
     
-            
-    public Parent (Builder builder){
-        this.id=builder.id;
-        this.identityNr=builder.identityNr;
-        this.email=builder.email;
+    public Parent(Builder builder)
+    {
         this.ContactNr=builder.ContactNr;
-        
-    }
+        this.email=builder.email;
+        this.identityNr=builder.identityNr;
+    }   
     public static class Builder
-    {
-        private Integer identityNr;
-        private String email;
-        private Long id;
+            {
         private int ContactNr;
+        private String email;
+        private int identityNr;
         
-    public Builder (String email)
-    {
-        this.email=email;
-    }
-    
-    public Builder identityNr(Integer identityNr)
-    {
-        this.identityNr=identityNr;
-        return this;
-     }
-      
-    public Builder id(Long value)
-    {
-        this.id=value;
-        return this;
-    }
-    public Builder ContactNr(Integer ContactNr)
-    {
-        this.ContactNr=ContactNr;
-        return this;
-    }
-    public Builder copy (Builder value){
-        this.id=value.id;
-        this.identityNr=value.identityNr;
-        this.email=value.email;
+        
+        public Builder(Integer idenityNr)
+        {
+            this.identityNr=identityNr;
+        }
+        
+        public Builder email(String email)
+        {
+            this.email=email;
+            return this;
+        }
+        public Builder ContactNr(Integer ContactNr)
+        {
+            this.ContactNr=ContactNr;
+            return this;
+        } 
+        
+        public Builder copy(Builder value)
+        {
         this.ContactNr=value.ContactNr;
+        this.email=value.email;
+        this.identityNr=value.identityNr;
         return this;
+        } 
+        public Parent build()
+        {
+            return new Parent(this);
+        }
         
-    }
-    public Parent build()
-    {
-        return new Parent(this);
-    }
-    }
-    
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Parent)) {
-            return false;
-        }
-        Parent other = (Parent) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "educircle.domain.Subject[ id=" + id + " ]";
     }
     
 }

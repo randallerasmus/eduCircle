@@ -6,6 +6,7 @@
 package educircle.domain;
 
 import java.io.Serializable;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -50,7 +51,9 @@ import javax.persistence.Id;
     {
         
     }
-
+    
+    @Embedded
+    private Parent parent;
             
     public Student (Builder builder){
         this.id=builder.id;

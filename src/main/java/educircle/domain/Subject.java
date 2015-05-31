@@ -41,6 +41,15 @@ import javax.persistence.Id;
     {
         
     }
+    @Embedded
+    private TimeTable timetable;
+    
+    @Embedded 
+    private Result resultable;
+    
+    @Embedded
+    private NonAttendance nonattendable;
+    
               
     public Subject (Builder builder){
         this.id=builder.id;
