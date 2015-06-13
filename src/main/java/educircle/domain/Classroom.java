@@ -24,7 +24,7 @@ import javax.persistence.Id;
     private Long id;
     private String LearnerName;
     private String LearnerSurname;
-    private String Teacher;
+    private String TeacherName;
   
     
     public Long getId() {
@@ -38,8 +38,8 @@ import javax.persistence.Id;
         return LearnerSurname;
     }
 
-    public String getTeacher() {
-        return Teacher;
+    public String getTeacherName() {
+        return TeacherName;
     }
 
     public Classroom ()
@@ -51,7 +51,7 @@ import javax.persistence.Id;
         this.id=builder.id;
         this.LearnerName=builder.LearnerName;
         this.LearnerSurname=builder.LearnerSurname;
-        this.Teacher=builder.Teacher;
+        this.TeacherName=builder.TeacherName;
           
     }
     public static class Builder
@@ -59,46 +59,36 @@ import javax.persistence.Id;
      
         private String LearnerName;
         private Long id;
-     
         private String LearnerSurname;
-        private String Teacher;
-    
+        private String TeacherName;
         
-         public Builder id(Long value)
+        public Builder id(Long value)
         {
         this.id=value;
         return this;
         }
-         public Builder (String LearnerName)
+        public Builder (String LearnerName)
         {
         this.LearnerName=LearnerName;
-        
         }
        public Builder LearnerSurname(String LearnerSurname) 
         {
             this.LearnerSurname = LearnerSurname;
             return this;
         }
-        public Builder Teacher(String Teacher) 
+        public Builder TeacherName(String TeacherName) 
         {
-            this.Teacher = Teacher;
+            this.TeacherName = TeacherName;
             return this;
         }
-    
-    
    
      public Builder copy (Builder value){
         this.id=value.id;
-    
         this.LearnerName=value.LearnerName;
-     
         this.LearnerSurname=value.LearnerSurname;
-        this.Teacher=value.Teacher;
-      
+        this.TeacherName=value.TeacherName;
         return this;
-        
     }
-   
    
     public Classroom build()
     {
