@@ -5,7 +5,7 @@
  */
 package educirce.factories;
 
-import educircle.domain.Administrator;
+import educircle.domain.Contact;
 
 /**
  *
@@ -13,9 +13,9 @@ import educircle.domain.Administrator;
  */
 public class AdministratorFactory 
 {
-   public static Administrator createAdministrator(int Empno)
+   public static Contact createAdministrator(int Empno)
    {
-       Administrator admin = new Administrator
+       Contact admin = new Contact
                .Builder(Empno)
                .build();
        return admin;

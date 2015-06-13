@@ -5,14 +5,14 @@
  */
 package educircle.Repository;
 
-import educircle.domain.Student;
+import educircle.domain.Learner;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author RASCAL
  */
-public interface StudentRepository extends CrudRepository<Student,Long>
+public interface StudentRepository extends CrudRepository<Learner,Long>
 {
     
 }

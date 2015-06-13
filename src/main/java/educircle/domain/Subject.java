@@ -48,7 +48,7 @@ import javax.persistence.Id;
     private Result resultable;
     
     @Embedded
-    private NonAttendance nonattendable;
+    private Attendance nonattendable;
     
               
     public Subject (Builder builder){

@@ -5,7 +5,7 @@
  */
 package educirce.factories;
 
-import educircle.domain.Student;
+import educircle.domain.Learner;
 
 /**
  *
@@ -13,10 +13,10 @@ import educircle.domain.Student;
  */
 public class StudentFactory 
 {
-    public static Student createStudent(String grade,int identityNr,int ContactNr,
+    public static Learner createStudent(String grade,int identityNr,int ContactNr,
             int postalCode)
     {
-        Student studs = new Student
+        Learner studs = new Learner
                 .Builder(identityNr)
                 .ContactNr(ContactNr)
                 .grade(grade)

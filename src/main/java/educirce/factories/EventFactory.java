@@ -5,7 +5,7 @@
  */
 package educirce.factories;
 
-import educircle.domain.Event;
+import educircle.domain.Demographics;
 import java.sql.Time;
 import java.util.Date;
 
@@ -15,10 +15,10 @@ import java.util.Date;
  */
 public class EventFactory {
     
-    public static Event createEvent(String EventName,String EventLocation,
+    public static Demographics createEvent(String EventName,String EventLocation,
             Date EventDate,Time EventTime)
     {
-        Event occur = new Event
+        Demographics occur = new Demographics
                 .Builder(EventName)
                 .EventLocation(EventLocation)
                 .EventDate(EventDate)

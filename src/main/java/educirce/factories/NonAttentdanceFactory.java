@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package educirce.factories;
-import educircle.domain.NonAttendance;
+import educircle.domain.Attendance;
 import java.sql.Time;
 import java.util.Date;
 
@@ -14,10 +14,10 @@ import java.util.Date;
  */
 public class NonAttentdanceFactory {
     
-    public static NonAttendance createNonAttendance(int StudentNr,String StudentName,String SubjectName,
+    public static Attendance createNonAttendance(int StudentNr,String StudentName,String SubjectName,
             Date AbsentDate,Time AbsentTime)
     {       
-            NonAttendance nonattend = new NonAttendance
+            Attendance nonattend = new Attendance
                     .Builder(StudentNr)
                     .StudentName(StudentName)
                     .SubjectName(SubjectName)

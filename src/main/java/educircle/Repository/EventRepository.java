@@ -5,14 +5,14 @@
  */
 package educircle.Repository;
 
-import educircle.domain.Event;
+import educircle.domain.Demographics;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author RASCAL
  */
-public interface EventRepository extends CrudRepository<Event,Long>
+public interface EventRepository extends CrudRepository<Demographics,Long>
 {
   
 }

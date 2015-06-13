@@ -5,14 +5,14 @@
  */
 package educircle.Repository;
 
-import educircle.domain.Administrator;
+import educircle.domain.Contact;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author RASCAL
  */
-public interface AdministratorRepository extends CrudRepository<Administrator,Long>
+public interface AdministratorRepository extends CrudRepository<Contact,Long>
 {
     
 }
