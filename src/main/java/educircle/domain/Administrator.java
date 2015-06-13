@@ -16,9 +16,9 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int EmpNo;
+    private String EmpNo;
 
-    public int getEmpNo() {
+    public String getEmpNo() {
         return EmpNo;
     }
     public Long getId() {
@@ -37,12 +37,12 @@ import javax.persistence.Id;
     }
     public static class Builder
     {
-        private Integer EmpNo;
+        private String EmpNo;
         private Long id;
         
     
     
-    public Builder (Integer EmpNo)
+    public Builder (String EmpNo)
     {
         this.EmpNo=EmpNo;
        

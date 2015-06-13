@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.educircle.EventTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.04 sec <<< FAILURE!
+testEventBuilder(com.mycompany.educircle.EventTest)  Time elapsed: 0.024 sec  <<< ERROR!
+java.lang.RuntimeException: Uncompilable source code - Erroneous sym type: com.mycompany.educircle.Event.EventBuilder
+	at com.mycompany.educircle.EventTest.testEventBuilder(EventTest.java:94)
+testGetEventTime(com.mycompany.educircle.EventTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.educircle.EventTest.testGetEventTime(EventTest.java:78)
+testGetEventDate(com.mycompany.educircle.EventTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.educircle.EventTest.testGetEventDate(EventTest.java:52)
+testGetEventName(com.mycompany.educircle.EventTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.educircle.EventTest.testGetEventName(EventTest.java:39)
+testGetEventLocation(com.mycompany.educircle.EventTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.educircle.EventTest.testGetEventLocation(EventTest.java:65)
