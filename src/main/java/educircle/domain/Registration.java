@@ -22,33 +22,32 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    private String surname;
-    private String race;
-    private String gender;
+    private String LearnerName;
+    private String LearnerSurname;
+    private String ParentEmail;
     private String grade;
-    private int studentNr;
+    private int LearnerIdNumber;
     
     public Long getId() {
         return id;
     }
-    public String getName() {
-        return name;
+    public String getLearnerName() {
+        return LearnerName;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLearnerSurname() {
+        return LearnerSurname;
     }
 
-    public String getrace() {
-        return race;
+    public String getParentEmail() {
+        return ParentEmail;
+    }
+    public int getLearnerIdNumber()
+    {
+        return LearnerIdNumber;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public String getGrade() {
+     public String getGrade() {
         return grade;
     }
     
@@ -59,22 +58,22 @@ import javax.persistence.Id;
                
     public Registration (Builder builder){
         this.id=builder.id;
-        this.studentNr=builder.studentNr;
-        this.name=builder.name;
-        this.surname=builder.surname;
-        this.race=builder.race;
-        this.gender=builder.gender;
+        this.LearnerIdNumber=builder.LearnerIdNumber;
+        this.LearnerName=builder.LearnerName;
+        this.LearnerSurname=builder.LearnerSurname;
+        this.ParentEmail=builder.ParentEmail;
+       
         this.grade=builder.grade;
         
     }
     public static class Builder
     {
-        private Integer studentNr;
-        private String name;
+        private Integer LearnerIdNumber;
+        private String LearnerName;
         private Long id;
-        private String surname;
-        private String race;
-        private String gender;
+        private String LearnerSurname;
+        private String ParentEmail;
+     
         private String grade;
         
          public Builder id(Long value)
@@ -82,30 +81,21 @@ import javax.persistence.Id;
         this.id=value;
         return this;
     }
-
-        public Builder surname(String surname) {
-            this.surname = surname;
-            return this;
-        }
-
-        public Builder race(String race) {
-            this.race = race;
-            return this;
-        }
-
-        public Builder gender(String gender) {
-            this.gender = gender;
-            return this;
-        }
-    
-    public Builder (Integer studentNr)
+         public Builder (Integer LearnerIdNumber)
     {
-        this.studentNr=studentNr;
-            
+        this.LearnerIdNumber=LearnerIdNumber;
     }
-     public Builder name(String name)
+        public Builder LearnerSurname(String LearnerSurname) {
+            this.LearnerSurname = LearnerSurname;
+            return this;
+        }
+        public Builder ParentEmail(String ParentEmail) {
+            this.ParentEmail = ParentEmail;
+            return this;
+        }
+     public Builder LearnerName(String LearnerName)
     {
-        this.name=name;
+        this.LearnerName=LearnerName;
         return this;
     }
      public Builder grade(String grade)
@@ -115,16 +105,13 @@ import javax.persistence.Id;
     }
      public Builder copy (Builder value){
         this.id=value.id;
-        this.studentNr=value.studentNr;
-        this.name=value.name;
-        this.surname=value.surname;
-        this.race=value.race;
-        this.gender=value.gender;
+        this.LearnerIdNumber=value.LearnerIdNumber;
+        this.LearnerName=value.LearnerName;
+        this.LearnerSurname=value.LearnerSurname;
+        this.ParentEmail=value.ParentEmail;
         this.grade=value.grade;
         return this;
-        
     }
-   
    
     public Registration build()
     {
@@ -154,7 +141,7 @@ import javax.persistence.Id;
 
     @Override
     public String toString() {
-        return "educircle.domain.Subject[ id=" + id + " ]";
+        return "educircle.domain.Registration[ id=" + id + " ]";
     }
     
 }

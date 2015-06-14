@@ -22,14 +22,29 @@ import javax.persistence.Id;
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String subjectTitle;
-    private int ContactNr;
+    private int contactNumber;
+    private String race;
+    private String gender;
+    private String TeacherName;
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getTeacherName() {
+        return TeacherName;
+    }
 
     public String getSubjectTitle() {
         return subjectTitle;
     }
 
-    public int getContactNr() {
-        return ContactNr;
+    public int getcontactNumber() {
+        return contactNumber;
     }
    
     public Long getId() {
@@ -43,34 +58,50 @@ import javax.persistence.Id;
                 
     public Teacher (Builder builder){
         this.id=builder.id;
-        this.ContactNr=builder.ContactNr;
+        this.contactNumber=builder.contactNumber;
         this.subjectTitle=builder.subjectTitle;
-        
+        this.race=builder.race;
+        this.gender=builder.gender;
+        this.TeacherName=builder.TeacherName;
     }
     public static class Builder
-    {
-        private Integer ContactNr;
+    {   private Long id;
+        private Integer contactNumber;
         private String subjectTitle;
-        private Long id;
+        private String race;
+        private String gender;
+        private String TeacherName;
         
-    
-    
-    public Builder ContactNr(Integer ContactNr)
+        public Builder id(Long value)
     {
-        this.ContactNr=ContactNr;
+        this.id=value;
         return this;
-        
     }
-     public Builder(String subjectTitle)
+         public Builder(String subjectTitle)
     {
         this.subjectTitle=subjectTitle;
         
     }
-   
-    public Builder id(Long value)
+      public Builder TeacherName(String TeacherName)
+      {
+          this.TeacherName=TeacherName;
+          return this;
+      }
+    
+    public Builder contactNumber(Integer contactNumber)
     {
-        this.id=value;
+        this.contactNumber=contactNumber;
         return this;
+    }
+    public Builder race(String race)
+    {
+        this.race=race;
+        return this;
+    }
+    public Builder gender(String gender)
+    {
+       this.gender=gender;
+       return this;
     }
     public Teacher build()
     {
@@ -78,8 +109,11 @@ import javax.persistence.Id;
     }
      public Builder copy (Builder value){
         this.id=value.id;
-        this.ContactNr=value.ContactNr;
+        this.contactNumber=value.contactNumber;
         this.subjectTitle=value.subjectTitle;
+        this.TeacherName=value.TeacherName;
+        this.gender=value.gender;
+        this.race=value.race;
         return this;
         
     }

@@ -22,56 +22,51 @@ import javax.persistence.Id;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String grade;
-    private int identityNr;
-    private int ContactNr;
-    private int postalCode;
-
+    private String LearnerName;
+    private int LearnerIdNumber;
+    private String LearnerSurname;
+ 
     public Long getId() {
         return id;
     }
 
-    public String getGrade() {
-        return grade;
+    public String getLearnerName() {
+        return LearnerName;
     }
 
-    public int getIdentityNr() {
-        return identityNr;
+    public int getLearnerIdNumber() {
+        return LearnerIdNumber;
     }
 
-    public int getContactNr() {
-        return ContactNr;
-    }
-
-    public int getPostalCode() {
-        return postalCode;
+    public String getLearnerSurname() {
+        return LearnerSurname;
     }
 
     public Learner ()
     {
-        
     }
     
     @Embedded
     private Parent parent;
-            
+    
+    @Embedded
+    private Demographics demographics;
+    
+    @Embedded
+    private Contact contact;
+               
     public Learner (Builder builder){
         this.id=builder.id;
-        this.identityNr=builder.identityNr;
-        this.ContactNr=builder.ContactNr;
-        this.grade=builder.grade;
-        this.postalCode=builder.postalCode;
+        this.LearnerIdNumber=builder.LearnerIdNumber;
+        this.LearnerSurname=builder.LearnerSurname;
+        this.LearnerName=builder.LearnerName;
     }
-    
     public static class Builder
     {
         private Long id;
-        private Integer identityNr;
-        private int ContactNr;
-        private String grade;
-        private int postalCode;
-       
-        
+        private Integer LearnerIdNumber;
+        private String LearnerSurname;
+        private String LearnerName;
         
      public Builder id(Long value)
     {
@@ -79,27 +74,20 @@ import javax.persistence.Id;
         return this;
     }   
     
-    public Builder (Integer identityNr)
+    public Builder (Integer LearnerIdNumber)
     {
-        this.identityNr=identityNr;
-        
+        this.LearnerIdNumber=LearnerIdNumber;
     }
-    public Builder grade (String grade)
+    public Builder LearnerName (String LearnerName)
     {
-        this.grade=grade;
+        this.LearnerName=LearnerName;
         return this;
     }
-    public Builder ContactNr(int ContactNr)
+    public Builder LearnerSurname(String LearnerSurname)
     {
-        this.ContactNr=ContactNr;
+        this.LearnerSurname=LearnerSurname;
         return this;
     }
-    public Builder postalCode(int postalCode)
-    {
-        this.postalCode=postalCode;
-        return this;
-    }
-    
     public Learner build()
     {
         return new Learner(this);
@@ -128,7 +116,7 @@ import javax.persistence.Id;
 
     @Override
     public String toString() {
-        return "educircle.domain.Subject[ id=" + id + " ]";
+        return "educircle.domain.Learner[ id=" + id + " ]";
     }
     
 }

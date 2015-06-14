@@ -14,23 +14,25 @@ import javax.persistence.Embeddable;
  */
 @Embeddable
 public class Parent implements Serializable
-{
+{   
+    private String PName;
+    private String PSurname;
     private String email;
-    private int ContactNr;
-    private int identityNr;
+    private int contactNumber;
 
+    public String getPName() {
+        return PName;
+    }
+    public String getPSurname() {
+        return PSurname;
+    }
     public String getEmail() {
         return email;
     }
 
-    public int getContactNr() {
-        return ContactNr;
+    public int getContactNumber() {
+        return contactNumber;
     }
-
-    public int getIdentityNr() {
-        return identityNr;
-    }
-    
     public Parent()
     {
         
@@ -38,20 +40,27 @@ public class Parent implements Serializable
     
     public Parent(Builder builder)
     {
-        this.ContactNr=builder.ContactNr;
+        this.PName=builder.PName;
+        this.PSurname=builder.PSurname;
+        this.contactNumber=builder.contactNumber;
         this.email=builder.email;
-        this.identityNr=builder.identityNr;
+        
     }   
     public static class Builder
-            {
-        private int ContactNr;
-        private String email;
-        private int identityNr;
-        
-        
-        public Builder(Integer idenityNr)
         {
-            this.identityNr=identityNr;
+        private String PName;
+        private String PSurname;
+        private int contactNumber;
+        private String email;
+        
+        public Builder(String PName)
+        {
+            this.PName=PName;
+        }
+        public Builder PSurname(String PSurname)
+        {
+            this.PSurname=PSurname;
+            return this;
         }
         
         public Builder email(String email)
@@ -59,17 +68,18 @@ public class Parent implements Serializable
             this.email=email;
             return this;
         }
-        public Builder ContactNr(Integer ContactNr)
+        public Builder contactNumber(Integer contactNumber)
         {
-            this.ContactNr=ContactNr;
+            this.contactNumber=contactNumber;
             return this;
         } 
         
         public Builder copy(Builder value)
         {
-        this.ContactNr=value.ContactNr;
+        this.contactNumber=value.contactNumber;
         this.email=value.email;
-        this.identityNr=value.identityNr;
+        this.PName=value.PName;
+        this.PSurname=value.PSurname;
         return this;
         } 
         public Parent build()

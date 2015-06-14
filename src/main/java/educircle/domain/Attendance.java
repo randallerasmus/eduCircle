@@ -16,19 +16,21 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Attendance implements Serializable
 {
-    public Integer LearnerNumber;
+    public String LearnerName;
+    public String LearnerSurname;
     public String SubjectName;
     public Date AbsentDate;
-   
 
     public Attendance() {
     }
 
-    public Integer getLearnerNumber() 
-    {
-        return LearnerNumber;
+    public String getLearnerName() {
+        return LearnerName;
     }
 
+    public String getLearnerSurname() {
+        return LearnerSurname;
+    }
     public String getSubjectName() 
     {
         return SubjectName;
@@ -40,41 +42,46 @@ public class Attendance implements Serializable
 
    
     public Attendance (Builder builder){
-        this.LearnerNumber=builder.LearnerNumber;
+       this.LearnerName=builder.LearnerName;
+       this.LearnerSurname=builder.LearnerSurname;
         this.SubjectName=builder.SubjectName;
         this.AbsentDate=builder.AbsentDate;
      
     }
     public static class Builder
     {
-        private Integer LearnerNumber;
         private String SubjectName;
         private Date AbsentDate;
+        private String LearnerName;
+        private String LearnerSurname;
       
     
     
-    public Builder (Integer LearnerNumber)
+    public Builder (String LearnerName)
     {
-        this.LearnerNumber=LearnerNumber;
-       
-        
+        this.LearnerName=LearnerName;
     }
     public Builder SubjectName (String SubjectName)
     {
         this.SubjectName=SubjectName;
         return this;
     }
-   
     public Builder AbsentDate (Date AbsentDate)
     {
         this.AbsentDate=AbsentDate;
         return this;
     }
+    public Builder LearnerSurname(String LearnerSurname)
+    {
+        this.LearnerSurname=LearnerSurname;
+        return this;
+    }
    
     public Builder copy (Builder value){
-        this.LearnerNumber=value.LearnerNumber;
         this.SubjectName=value.SubjectName;
         this.AbsentDate=value.AbsentDate;
+        this.LearnerName=value.LearnerName;
+        this.LearnerSurname=value.LearnerSurname;
         return this;
     }
     public Attendance build()

@@ -56,7 +56,6 @@ import javax.persistence.Id;
     }
     public static class Builder
     {
-     
         private String LearnerName;
         private Long id;
         private String LearnerSurname;

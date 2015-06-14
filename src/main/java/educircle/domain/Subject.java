@@ -49,32 +49,26 @@ import javax.persistence.Id;
     
     @Embedded
     private Attendance nonattendable;
-    
               
     public Subject (Builder builder){
         this.id=builder.id;
         this.subjectCode=builder.subjectCode;
         this.subjectName=builder.subjectName;
-        
     }
     public static class Builder
-    {
+    {   
+        private Long id;
         private Integer subjectCode;
         private String subjectName;
-        private Long id;
         
-    
-    
     public Builder subjectCode(Integer subjectCode)
     {
         this.subjectCode=subjectCode;
         return this;
-        
     }
      public Builder (String subjectName)
     {
         this.subjectName=subjectName;
-        
     }
    
     public Builder id(Long value)

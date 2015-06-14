@@ -23,7 +23,6 @@ public class Result implements Serializable
     public String getStudentName() {
         return StudentName;
     }
-    
             
     public String getSubjectName() {
         return SubjectName;
@@ -45,7 +44,6 @@ public class Result implements Serializable
         private String SubjectName;
         private Double StudentMarks;
     
-    
     public Builder (String StudentName)
     {
         this.StudentName=StudentName;
@@ -62,11 +60,10 @@ public class Result implements Serializable
         return this;
     }
     public Builder copy(Result value){
-        this.StudentName=value.getStudentName();
-        this.SubjectName=value.getSubjectName();
-        this.StudentMarks=value.getStudentMarks();
+        this.StudentName=value.StudentName;
+        this.SubjectName=value.SubjectName;
+        this.StudentMarks=value.StudentMarks;
         return this;
-        
     }
     public Result build()
     {

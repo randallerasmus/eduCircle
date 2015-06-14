@@ -48,7 +48,6 @@ public class TimeTable implements Serializable
         this.SubjectTime=builder.SubjectTime;    
     }
 
-
     public static class Builder
     {
     private String SubjectVenue;
@@ -56,11 +55,9 @@ public class TimeTable implements Serializable
     private String SubjectName;
     private Time SubjectTime;
     
-    
     public Builder (String SubjectVenue)
     {
         this.SubjectVenue = SubjectVenue;
-        
     }
     
     public Builder SubjectDate( Date value)
