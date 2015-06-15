@@ -6,10 +6,14 @@
 package educircle.domain;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -20,6 +24,12 @@ import javax.persistence.Id;
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
+    @OneToMany
+    @JoinColumn(name="LNR_ID")
+    private List<Learner> learner;
+    
+    @Id
     private Long id;
     private String subjectTitle;
     private int contactNumber;
@@ -34,12 +44,12 @@ import javax.persistence.Id;
     public String getGender() {
         return gender;
     }
-
+                                                                                                                                                                                                                                                                                                                        
     public String getTeacherName() {
         return TeacherName;
     }
 
-    public String getSubjectTitle() {
+   public String getSubjectTitle() {
         return subjectTitle;
     }
 
