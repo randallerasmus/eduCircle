@@ -11,11 +11,12 @@ import educircle.domain.Parent;
  */
 public class ParentFactory 
 {
-    public static Parent creatParent(String email,int identityNr,int ContactNr)
+    public static Parent createParent(String email,String PName,String PSurname,int contactNumber)
     {
         Parent par = new Parent
-                .Builder(identityNr)
-                .ContactNr(ContactNr)
+                .Builder(PName)
+                .PSurname(PSurname)
+                .contactNumber(contactNumber)
                 .email(email)
                 .build();
            return par;

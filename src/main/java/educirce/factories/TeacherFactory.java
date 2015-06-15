@@ -13,11 +13,16 @@ import educircle.domain.Teacher;
  */
 public class TeacherFactory 
 {
-    public static Teacher createTeacher(String subjectTitle,int ContactNr)
+   
+    public static Teacher createTeacher(String subjectTitle,int contactNumber,String race,String gender,
+            String TeacherName)
     {
         Teacher educators = new Teacher
                 .Builder(subjectTitle)
-                .ContactNr(ContactNr)
+                .contactNumber(contactNumber)
+                .race(race)
+                .gender(gender)
+                .TeacherName(TeacherName)
                 .build();
         return educators;
     }

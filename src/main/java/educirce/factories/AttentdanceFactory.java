@@ -8,24 +8,21 @@ import educircle.domain.Attendance;
 import java.sql.Time;
 import java.util.Date;
 
-/**
+/**                             
  *
  * @author RASCAL
  */
-public class NonAttentdanceFactory {
-    
-    public static Attendance createNonAttendance(int StudentNr,String StudentName,String SubjectName,
-            Date AbsentDate,Time AbsentTime)
+public class AttentdanceFactory {
+   
+    public static Attendance createNonAttendance(String LearnerName,String LearnerSurname,String SubjectName,
+            Date AbsentDate)
     {       
             Attendance nonattend = new Attendance
-                    .Builder(StudentNr)
-                    .StudentName(StudentName)
+                    .Builder(LearnerName)
+                    .LearnerSurname(LearnerSurname)
                     .SubjectName(SubjectName)
                     .AbsentDate(AbsentDate)
-                    .AbsentTime(AbsentTime)
                     .build();
                     return nonattend;
-  
-    }
-    
+      }
 }

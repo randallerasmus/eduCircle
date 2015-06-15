@@ -13,6 +13,7 @@ import educircle.domain.Result;
  */
 public class ResultFactory 
 {
+   
     public static Result createResult(String StudentName,String SubjectName,Double StudentMarks)
     {
         Result mark = new Result

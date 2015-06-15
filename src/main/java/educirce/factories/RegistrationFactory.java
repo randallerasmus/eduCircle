@@ -13,15 +13,15 @@ import educircle.domain.Registration;
  */
 public class RegistrationFactory 
 {
-   public static Registration createRegistration(String name,String surname,
-            String race,String gender,String grade,int studentNr)
+    
+   public static Registration createRegistration(String LearnerName,String LearnerSurname,
+            String ParentEmail,String grade,int LearnerIdNumber)
     {
         Registration register = new Registration
-                .Builder(studentNr)
-                .gender(gender)
-                .name(name)
-                .race(race)
-                .surname(surname)
+                .Builder(LearnerIdNumber)
+                .LearnerName(LearnerName)
+                .LearnerSurname(LearnerSurname)
+                .ParentEmail(ParentEmail)
                 .grade(grade)
                 .build();
         return register;

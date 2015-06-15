@@ -11,16 +11,15 @@ import educircle.domain.Learner;
  *
  * @author RASCAL
  */
-public class StudentFactory 
+public class LearnerFactory 
 {
-    public static Learner createStudent(String grade,int identityNr,int ContactNr,
-            int postalCode)
+    public static Learner createLearner(String LearnerName,int LearnerIdNumber,String LearnerSurname)
+            
     {
         Learner studs = new Learner
-                .Builder(identityNr)
-                .ContactNr(ContactNr)
-                .grade(grade)
-                .postalCode(postalCode)
+                .Builder(LearnerIdNumber)
+                .LearnerName(LearnerName)
+                .LearnerSurname(LearnerSurname)
                 .build();
         return studs;
     }
