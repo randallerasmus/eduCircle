@@ -12,7 +12,7 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author RASCAL
  */
-public interface StudentRepository extends CrudRepository<Learner,Long>
+public interface LearnerRepository extends CrudRepository<Learner,Long>
 {
     
 }

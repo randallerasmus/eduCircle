@@ -14,5 +14,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface RegistrationRepository extends CrudRepository<Registration,Long>
 {
-    public Registration findByCode (int studentNr);
+   
 }
