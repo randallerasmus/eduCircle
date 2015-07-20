@@ -13,7 +13,7 @@ If a learner's class tests,POE’s (portfolio of evidence) and exam results are 
 There will also be a link to inform the parents on the latest events happening at the school like school concerts, parent meeting, carnivals, camping trips etc. 
 The app will allow the parents and teachers to converse immediately regarding the learner at the school.
 
-Hold down the (Ctrl) button and Press the (+) to enlarge the screen to get a better view on the image 
+Hold down the (Ctrl) button and Press the (+) to enlarge the screen to get a better view on the domain model 
 
 ![Alt text](images/eduCircle.png)
 
