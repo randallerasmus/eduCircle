@@ -17,4 +17,4 @@ Hold down the (Ctrl) button and Press the (+) to enlarge the screen to get a bet
 
 ![Alt text](images/eduCircle.png)
 
-Lets do everything in our power to equip the generation of Tommorrow.
+Lets do everything in our power to save and equip the future generation of Tommorrow.
